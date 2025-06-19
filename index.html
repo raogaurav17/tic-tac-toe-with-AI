@@ -14,6 +14,10 @@
     </div>
    <main>
     <h1>Tic-Tac-Toe</h1>
+    <div class="mode-selector">
+        <label><input type="radio" name="mode" value="single" checked> Single Player</label>
+        <label><input type="radio" name="mode" value="multiplayer"> Multiplayer</label>
+    </div>
     <div class="container">
         <div class="game">
             <button class="box"></button>
@@ -29,6 +33,6 @@
     </div>
     <button id = "reset-game">Reset Game</button>
    </main>
-   <script  src = "app.js"></script>
+   <script type="module" src = "app.js"></script>
 </body>
 </html>
