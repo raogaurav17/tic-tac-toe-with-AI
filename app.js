@@ -3,8 +3,14 @@ let resetbtn = document.querySelector("#reset-game");
 let newbtn = document.querySelector('#new-game');
 let msgContainer = document.querySelector(".msg-container");
 let msg = document.querySelector("#msg");
+let Oscore =document.querySelector('.scoreO');
+let Xscore = document.querySelector('.scoreX');
 
 let turnO = true;
+
+let O = 0;
+
+let X = 0;
 
 let noOfGame = 0;
 
@@ -51,6 +57,14 @@ const showWinner = (winner) => {
     msgContainer.classList.remove("hide");
     disableboxes();
     noOfGame ++;
+    if(winner == 'X'){
+        X += 1;
+        Xscore.innerText = X;
+    }
+    else{
+        O += 1;
+        Oscore.innerText = O;
+    }
 }
 
 const clearBoard = () => {
@@ -79,6 +93,11 @@ const newGame = () => {
     turnO = true;
     noOfGame = 0;
     click = 0;
+    click = 0;
+    O = 0;
+    X = 0;
+    Oscore.innerText = O;
+    Xscore.innerText = X;
 }
 
 document.querySelectorAll('input[name="mode"]').forEach((radio) => {
